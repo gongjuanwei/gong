@@ -12,7 +12,6 @@
 #注释：’‘’ 三个引号  单行注释；多行注释‘’‘多行’‘’
 
 #数据类型 ：字符串string、整数int、小数float
-#
 #python2里面 raw-input()
 # import datetime
 # name = input('欢迎登陆，请输入你的名字：')    #接收输入的

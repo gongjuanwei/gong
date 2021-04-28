@@ -35,4 +35,4 @@ print(stu2.count("蔡建雅"))#查找元素出现次数
 # stu2.sort()
 # stu2.reverse()
 # stu2.clear()
-# stu2.extend()
+stu2.extend()

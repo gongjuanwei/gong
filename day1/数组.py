@@ -46,6 +46,7 @@ num =[90,80,70,100,2,1,3,66]
 # num.clear()#清空list
 num.extend(stu)#吧另一个list里面的元素加入到另一个list里面
 print(num)
+#
 
 
 

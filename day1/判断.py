@@ -35,7 +35,7 @@
 # p = input("请输入密码：")
 # if u == username or u == username2:
 #     if p == password:
-#         print("dengluchenggong")
+#         print("登录成功")
 #     else:
 #         print("mimacuowu")
 # else:
@@ -62,6 +62,7 @@
 #     print("合法")
 # else:
 #     print("不对")
+
 # 第三种：定义一个字符串、加取长度,not in不在sex_str里面
 sex= input("请输入性别：")
 sex_str = "男女"

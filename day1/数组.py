@@ -1,38 +1,51 @@
-# str字符串  int float  bool
-stuents = "蔡徐坤","蔡康永","蔡健雅"
-#数组（页可叫列表）
-stu2 =[ "蔡徐坤","蔡康永","蔡健雅" ]
-#           0           1       2
-#下标、角标、索引 从0开始
-
+#str int  float  bool  list
+#数组
+stu =["蔡一","蔡二","蔡三"]
+print(stu)
 #取元素
-print(stu2)
-print(stu2[1])
+print(stu[0])
 #新增元素
-# stu2.append("蔡克")
-# stu2.insert(0,"蔡琳")
-# print(stu2)
+stu.append("最后新增元素")
+stu.insert(0,"最前面新增元素")
+stu.insert(2,"元素")
+stu.append("泡泡元素")
+print(stu)
+
 #修改元素
-# stu2[0] = "修改元素"
-# print(stu2)
-# stu = "111"
-# if stu in stu2:
-#     index = stu2.index(stu)#如果查找并不存在元素，会报错
-#     stu2[index]= "等等"
-# print(stu2)
-#删除
-# stu2.pop()#删除末尾的元素
-# print(stu2)
-# stu2.pop(0)#删除指定下标
-# stu2.append("蔡健雅")
-# print(stu2)
-# stu2.remove("蔡健雅")#删除指定元素,
-print(stu2)
-# del stu2[0]#
-print(stu2)
-print(stu2.count("蔡建雅"))#查找元素出现次数
-# stu2.count()
-# stu2.sort()
-# stu2.reverse()
-# stu2.clear()
-stu2.extend()
+stu[2]="蔡一"
+print(stu)
+# index = stu.index("元素")#找下标，如果查询不存在的元素会报错
+# stu[index]= "修改元素"#修改元素的值
+# print(stu)
+#用for ，查询元素不存在的话怎么判断
+# stus ="111"
+# if stus in stu:
+#     index=stu.index(stus)
+#     stu[index]= "用for判断修改元素"
+#     print(stu)
+
+#删除元素
+stu.append("最前面的元素")
+print(stu)
+#stu.pop()#删除末尾的元素
+# stu.pop(0)#删除指定下标的元素
+# stu.remove("蔡一")#删除指定的元素
+# print("删除下标，的元素%s" % stu)
+# del stu[1]
+# print(stu)
+
+
+# print( stu.count("蔡一") )#查找元素出现的次数
+num =[90,80,70,100,2,1,3,66]
+# num.sort()#排序，默认升序
+# print(num)
+# num.sort(reverse=True)#排序，默认是升序，会改变原来的list的值
+# print(num)
+
+# num.reverse()#反转list，会改变原来list的值
+# num.clear()#清空list
+num.extend(stu)#吧另一个list里面的元素加入到另一个list里面
+print(num)
+
+
+

@@ -16,6 +16,7 @@ print(stu)
 
 #修改
 stu["age"] =19
+
 #取值
 # #法一：中括号[]
 # print(stu["name"])
@@ -26,6 +27,7 @@ stu["age"] =19
 # print(stu)
 #get如果取值不存在的值,会返回null；中括号如果取值不存在的值，会报错
 print(stu.get("age1"))
+
 
 #删除
 #stu.pop("age")方法一

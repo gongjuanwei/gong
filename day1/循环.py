@@ -64,7 +64,7 @@
 
 # for循环
 # for i in range(7):
-# #     print(i)
+#      print(i)
 
 
 import random

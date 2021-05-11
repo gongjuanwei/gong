@@ -18,8 +18,8 @@ print(a.find("b1"))#如果找元素不存在，会返回-1
 # a.count()#统计字符串中出现的某个字符串的个数
 # a.isdigit()#判断字符串，是否为整数,是就返回true，否就返回false
 
-# a.isalnum()#如果字符串不包含特殊符号，就返回true
-# a.isalpha()#如果字母或者汉字就返回true,其它返回false
+# a.isalnum()#只要字符串不包含特殊符号，字母或者数字就返回true，不是就返回flash
+# a.isalpha()#只要字母或者汉字就返回true,其它返回false
 
 
 #a.format()#

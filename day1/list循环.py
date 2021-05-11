@@ -15,7 +15,7 @@ print(len(l))
 #方法二：麻烦方法
 # for index in range(len(l)):
 #     print(l[index])
-for name in l:#直接循环list,就是取list里面的每个元素
-    print(name)
+# for name in l:#直接循环list,就是取list里面的每个元素
+#     print(name)
 
 

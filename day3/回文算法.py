@@ -17,7 +17,7 @@ print('新增到s_list中',s_list)
 new_s = ''.join(s_list)#把字符串连接起来
 new_s = new_s.lower()#吧字符串变成小写
 
-if new_s == new_s[::-1]:#开头到结尾，从最后开始反转
+if new_s == new_s[::-1]:#开头到结尾，从最后字符串开始反转，反转后和反转前一样
     print("是回文")
 else:
     print("不是回文")

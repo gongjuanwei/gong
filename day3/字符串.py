@@ -81,5 +81,16 @@ print(v.capitalize())
 # print(n.center(50,'-'))
 
 
-# a.join()
-# a.split()
+
+# a.split()分割字符串的，分割之后会返回一个list
+# stus ='xiaohei\nxiaobai        xiaolan'
+stus ='xiaohei,xiaobai,xiaolan'
+print(stus.split(','))#分割字符串的，分割之后会返回一个list
+print(stus.split())#如果没有指定字符串，那么就按空字符来分割
+# a.join()#用来连接字符串的
+stu_list=['xiao','xiaobai','xiaolan']
+stu_str=' '.join(stu_list)
+print(stu_str)
+stu_str='*'.join(stu_list)
+print(stu_str)
+

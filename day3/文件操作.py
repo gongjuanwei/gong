@@ -36,6 +36,7 @@ f.close()
 # result=f.read()
 # f.close()
 # print(result)
+
 #1、r模式写，2、w模式读，然后写一些新内容，观察一些文件内容
 # f =open("a.txt",'w',encoding='utf-8')#
 # f.write("1111123456")

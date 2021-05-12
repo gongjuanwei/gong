@@ -7,7 +7,7 @@
 # else:
 #     age2="未成年"
 # #三元表达式：
-#     a3="成年" if age>18 else "未成年"
+#     a3 = "成年" if age>18 else "未成年"
 #     print(a3)
 
 

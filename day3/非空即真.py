@@ -19,3 +19,9 @@ else:
 #     print("username不能为空")
 # else:
 #     print("用户名为", username)
+
+#非空即真，非零即真
+age =18
+age =[]
+if age:
+    print("不为空")

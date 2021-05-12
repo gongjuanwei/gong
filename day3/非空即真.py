@@ -9,13 +9,13 @@ username=input("用户名:").strip()
 # if len(username)==0:
 #     print("输入不能为空")
 #True:
-# if username:
-#     print("用户名为：",username)
-# else:
-#     print("username不能为空")
+if username:
+    print("用户名为：",username)
+else:
+    print("username不能为空")
 
 #false:
-if not username:
-    print("username不能为空")
-else:
-    print("用户名为", username)
+# if not username:
+#     print("username不能为空")
+# else:
+#     print("用户名为", username)

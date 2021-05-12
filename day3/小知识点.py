@@ -23,10 +23,6 @@
 # print(w3)
 # w4 =[i for i in w if i %2==0 ]#有if条件的话就不用加str,i for 中的i,是用来存在list中的
 # print(w4)
-
-
-
-
 #其它方法，引入第三方变量temp
 a =1
 b=2
@@ -38,6 +34,7 @@ b=2
 #变量交换
 a,b =b,a
 print(a,b)
+#在把上面的结果交换回来
 a=a+b
 b=a-b
 a=a-b

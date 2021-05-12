@@ -16,6 +16,7 @@ def is_f(s):
                 and left[1:].isdigit() and right.isdigit():
             return True
     return False
+
 def add_product():
     with open('product.json', 'a+', encoding='utf-8') as f:   #以a+模式打开文件，如果存在判断是否有商品
         f.seek(0)    #文件指针放到最前面以便读取文件
@@ -28,7 +29,7 @@ def add_product():
     count = input('请输入商品数量：').strip()
     if name in product:
         print('您添加的商品已经存在')
-    elif not is_positive_float(price):
+    elif not is_f(price):
         print('您添加的商品价格不是大于0的数字')
     elif not count.isdigit() or int(count) == 0:
         print('您添加的商品数量不是大于0的整数')
@@ -72,16 +73,16 @@ def show_product():
 if __name__ == '__main__':
     T = True
     while T:
-        choice = input('请输入您的选择：A or a-添加商品，D or d-删除商品，S or s-查看商品，T or t-退出程序').strip()
-        if choice not in ('A','D','S','T','a','s','d','t'):
+        choice = input("请输入你的选择：1、 查询商品 2新增产品 3修改商品新 4、删除商品 5、退出")
+        if choice not in ('1','2','3','4','5'):
             continue
-        elif choice == 'A' or choice == 'a':
+        elif choice == '2' :
             add_product()
-        elif choice == 'D' or choice == 'd':
+        elif choice == '4' :
             del_product()
-        elif choice == 'S' or choice == 's':
+        elif choice == '1' :
             products = show_product()
             if products:
                 print(products)
-        elif choice == 'T' or choice == 't':
+        elif choice == '5' :
             T = False

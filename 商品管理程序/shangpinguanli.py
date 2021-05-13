@@ -1,10 +1,6 @@
 import json
 import pprint
-# 1、新增
-#                 输入 商品名称、价格、数量
-#                 商品不存在才可以添加
-#                 价格必须是大于0的整数/小数
-#                 数量必须是大于0的整数
+import os
 
 def is_f(s):
     s = str(s)
@@ -16,6 +12,7 @@ def is_f(s):
                 and left[1:].isdigit() and right.isdigit():
             return True
     return False
+
 
 def add_product():
     with open('product.json', 'a+', encoding='utf-8') as f:   #以a+模式打开文件，如果存在判断是否有商品
@@ -60,11 +57,13 @@ def del_product():
             f.truncate()     #删除了所以商品后，product是空字典，继续写入会写入{},需要直接清空字典
 
 
-def show_product():
+
+
+def chaxun_product():
     with open('product.json', 'a+', encoding='utf-8') as f:
         f.seek(0)
         if os.path.getsize('product.json'):
-            product = json.load(f)
+            product = json.load(all)
             return product
         else:
             print('暂无商品，请先添加商品')
@@ -73,7 +72,7 @@ def show_product():
 if __name__ == '__main__':
     T = True
     while T:
-        choice = input("请输入你的选择：1、 查询商品 2新增产品 3修改商品新 4、删除商品 5、退出")
+        choice = input("请输入你的选择：\n1查询商品\n2新增产品\n3修改商品新\n4删除商品\n5退出 ")
         if choice not in ('1','2','3','4','5'):
             continue
         elif choice == '2' :
@@ -81,7 +80,7 @@ if __name__ == '__main__':
         elif choice == '4' :
             del_product()
         elif choice == '1' :
-            products = show_product()
+            products = chaxun_product()
             if products:
                 print(products)
         elif choice == '5' :

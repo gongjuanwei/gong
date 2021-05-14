@@ -1,5 +1,6 @@
 product_file = 'product.json'
 import json
+import os
 # 定义一个公共函数，获取文件内容并转换成字典，共后面三个调用
 def read_goods():
     with open(product_file, encoding='utf-8') as f:  # 读取文件
@@ -81,38 +82,23 @@ def del_good():
         write_file_comtent(all)  # 调用函数，将字典写入文件中
 
 #修改商品
-# def modify_good():
-#     produt_name=input("请输入你想修改的商品：")
-#     all = read_goods()
-#     if produt_name in all:
-#         count = input("请输入修改商品的数量：")
-#         price = input("请输入修改商品的价格:")
-#         try:
-#             if float(count) >= 0:
-#                 value = {}
-#                 value["count"] = count
-#                 value["price"] = price
-#                 all[produt_name]=value
-#                 print('商品修改成功')
-#                 write_file_comtent(all)  # 调用函数，写入文件中
-#             else:
-#                 print("请输入正数")
-#         except ValueError as e:
-#             print("请输入实数！", e)
-#     else:
-#         print("修改的商品不存在，请重新输入：")
-
 def modify_good():
-    good=input("请输入你想修改的商品：")
+    produt_name=input("请输入你想修改的商品：")
     all = read_goods()
-    if good in all:
+    if produt_name in all:
         count = input("请输入修改商品的数量：")
         price = input("请输入修改商品的价格:")
-
-  elif s_good not in all:
-       print('商品不存在')
-
-
+        if float(count) >= 0:
+                value = {}
+                value["count"] = count
+                value["price"] = price
+                all[produt_name]=value
+                print('商品修改成功')
+                write_file_comtent(all)  # 调用函数，写入文件中
+        else:
+                print("请输入正数")
+    else:
+        print("修改的商品不存在，请重新输入：")
 
 
 
@@ -120,7 +106,7 @@ def modify_good():
 if __name__ == '__main__':
     T = True
     while T:
-        choice = input("请输入你的选择：\n1查询商品\n2新增产品\n3修改商品新\n4删除商品\n5退出 ")
+        choice = input("请输入你的选择：\n1查询商品\n2新增产品\n3修改商品新\n4删除商品\n5退出")
         if choice not in ('1','2','3','4','5'):
             continue
         elif choice == '2' :

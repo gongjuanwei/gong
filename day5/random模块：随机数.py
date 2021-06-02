@@ -2,6 +2,7 @@ import random
 random.randint(1,100)  #
 print(random.randint(1,100))#随机整数
 print(random.uniform(1,100))#随机小数
+print(random.randint(100000,999999))#随机验证码
 
 a='12345'
 h =[2,22,23,26,77,88]

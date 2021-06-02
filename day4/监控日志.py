@@ -6,7 +6,6 @@
 # 4、ip地址存起来，list或者dict存
 # 5、循环字典，判断出现的次数，大于100的找出来
 # 6、slepp(60)60秒后重新读
-
 fn ='access.log'
 point=0
 import time

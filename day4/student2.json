@@ -1,9 +1,6 @@
 {
-        "code": 0,
-        "msg": "操作成功",
-        "token": "xxxxx",
-        "addr": "xxxx",
-        "sdgsdg": "xxx",
-        "sdfsdf": "sdgsdg",
-        "s11": "111"
+    "code": 0,
+    "msg": "操作成功",
+    "token": "xxxxx",
+    "addr": "xxxx"
 }

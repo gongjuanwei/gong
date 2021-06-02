@@ -1,26 +1,16 @@
-# def hanshu1():
-#     print('hanshu')
-#
+def hello():
+    print('hello')
 
+#def定义函数
+def welcome(name):#name函数的参数
+    print("welcome %s"% name)
 
-#   函数名  形参：一个变量名
-# def hanshu(hs):
-#     print("hanshu %s" % hs)#函数体
-#
-# #        实参：实际参数
-# hanshu("cany")
-# hanshu("cany3")
+welcome("candy")#调用函数，传一个实际参数值
 
+def welcome(name,addr,age):#name函数的参数
+    print("welcome %s"% name,addr,age)
 
-#   函数名  形参：两个变量名
-# def hanshu(hs,ct):
-#     print("第一个参数hanshu %s,第二个参数%s" % (hs,ct))#函数体
-#
-# #        实参：实际参数
-# hanshu("cany","多个参数1")
-# hanshu("cany3","多个参数2")
-
-
+welcome("candy","中国",18)
 
 #   函数名  形参：两个变量名，一个默认值，调用的时候就不需要写
 # def hanshu(hs,ct="默认值"):

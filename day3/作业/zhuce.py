@@ -12,7 +12,7 @@
 username=input("xx:")
 
 for i in range(3):
-      f =open("用户名和密码.txt",'w')
+      f =open("用户名和密码.txt", 'w')
       nums = [str(i) + '\n' for i in num]
       print(nums)
       f.writelines(nums)

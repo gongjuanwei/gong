@@ -20,7 +20,7 @@
 # print(f.read())#读
 # f.close()
 #write完，文件没有写进文件
-f =open('user.txt','w+',encoding='utf-8')
+f =open('user.txt', 'w+', encoding='utf-8')
 f.write("w+")#只能写字符串
 f.flush()#刷新一下缓冲，立马写入磁盘
 print(f.tell())#告诉你现在文件指针的位置

@@ -1,5 +1,5 @@
 import os
-f1 = open("user.txt",encoding='utf-8')
+f1 = open("user.txt", encoding='utf-8')
 f2 = open("user.txt.bak","w",encoding="utf-8")
 for line in f1:
     new_line = line.replace("周","周杰伦")
@@ -7,5 +7,5 @@ for line in f1:
 f1.close()
 f2.close()
 os.remove("user.txt")
-os.rename("user.txt.bak","user.txt")
+os.rename("user.txt.bak", "user.txt")
 

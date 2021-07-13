@@ -1,0 +1,10 @@
+path里面配置：python（安装目录E:\python） +E:\python\Scripts
+
+
+
+  然后，cmd  ,python 查询是否安装
+  然后进入Scripts目录：
+  C:\Users\Think>cd C:\Users\Think\AppData\Local\Programs\Python\Python37\Scripts
+  然后安装：汉子转拼音模块 pip install xpinyin·】·······················1】
+  pip install faker 模块
+  pip install pymysql

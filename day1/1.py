@@ -28,9 +28,9 @@
 
 #运算符
 age=5
-sum=age +1
-number1=age-1
-number2=age*3
+sum=age +1#加
+number1=age-1#减
+number2=age*3#乘
 number3=age/4#正常计算，在Python2里面就是地板除，如果你要变成正常的除法，那么除数或者被除数要有一个是小数类型
 number4=age//4#地板除，只保留整数部分
 number5=2**3#取N次方
@@ -38,7 +38,9 @@ number6=10 % 7#取余数，取模
 print('相加结果：',sum)
 print('相减结果：',number1)
 print('相乘结果：',number2)
-print('相除结果：',number3)
-print('取次方',number4)
-print('取余数结果',number5)
+print('相除结果，保留两位小数：',number3)
+print('相除结果，只保留整数：',number4)
+print('取次方：',number5)
+print('取余数结果：',number6)
+
 

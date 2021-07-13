@@ -49,7 +49,7 @@ import requests
 
 #上传文件请求
 url = "http://api.nnzhp.cn/api/file/file_upload"
-data = {"file":open("a.xls",'rb')}
+data = {"file":open("a.XLS", 'rb')}
 req = requests.post(url,files=data)
 print(req.json())  #返回字典，如果接口返回的不是json，那会报错
 

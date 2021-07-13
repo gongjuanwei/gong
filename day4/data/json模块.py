@@ -34,10 +34,10 @@ d={"code":0,"msg":"操作成功","token":"xxxxx","addr":"xxxx"}
 
 
 # json.load()#吧字符串转成字典，自动帮你读
-with open("student2.json",encoding="utf-8") as f:
+with open("student2.json", encoding="utf-8") as f:
     result =json.load(f)
     print(result)
 
 # json.dump()#吧字典转成字符串，自动帮你写
-with open("student2.json",'w',encoding="utf-8") as f:
+with open("student2.json", 'w', encoding="utf-8") as f:
     json.dump(d,f,ensure_ascii=False,indent=4)

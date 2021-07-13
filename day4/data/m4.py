@@ -8,3 +8,5 @@ def is_f(s):
                 and left[1:].isdigit() and right.isdigit():
             return True
     return False
+
+

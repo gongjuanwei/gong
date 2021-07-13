@@ -4,8 +4,8 @@ import time
 #格式化好的时间
 
 #2021515  --50天后的时间
-# print(int(time.time()))#获取当前的时间戳
-# print(time.strftime('%Y-%m-%d %H:%M:%S'))#获取当前格式化好的时间
+print(int(time.time()))#获取当前的时间戳
+print(time.strftime('%Y-%m-%d %H:%M:%S'))#获取当前格式化好的时间
 # print(time.strftime('%y-%m-%d %H:%M:%S'))#获取当前格式化好的时间
 # print(time.strftime('%Y-%m-%d '))#获取当前格式化好的时间
 # print(time.strftime('%H:%M'))#获取当前格式化好的时间
@@ -28,27 +28,27 @@ import time
 
 
 
-def str_to_timestamp(s=None,format='%Y-%m-%d %H:%M:%S'):
-    '''
-       :param s: 格式化好的时间，比如2021-5-16 17:06:32
-       :param format: 时间格式 %Y-%m-%d %H:%M:%S
-       :return: 返回的是一个时间戳，如果不传s，默认返回当前时间戳
-       '''
-    if s:
-        time_tuple = time.strptime(s,format)
-        return int(time.mktime(time_tuple))
-    return int (time.time())
-
-def timestamp_to_str(timestame=None,format="%Y-%m-%d %H:%M:%S"):
-    '''
-    :param  timestame: 时间戳
-    :param  format: 时间格式 %Y-%m-%d %H:%M:%S
-    :return: 返回的是格式化好的时间，如果不传时间戳，那么返回当前的时间
-    '''
-    if timestame:
-        time_tuple = time.localtime(timestame)
-        return time.strftime(format,time_tuple)
-    return time.strftime(format)
+# def str_to_timestamp(s=None,format='%Y-%m-%d %H:%M:%S'):
+#     '''
+#        :param s: 格式化好的时间，比如2021-5-16 17:06:32
+#        :param format: 时间格式 %Y-%m-%d %H:%M:%S
+#        :return: 返回的是一个时间戳，如果不传s，默认返回当前时间戳
+#        '''
+#     if s:
+#         time_tuple = time.strptime(s,format)
+#         return int(time.mktime(time_tuple))
+#     return int (time.time())
+#
+# def timestamp_to_str(timestame=None,format="%Y-%m-%d %H:%M:%S"):
+#     '''
+#     :param  timestame: 时间戳
+#     :param  format: 时间格式 %Y-%m-%d %H:%M:%S
+#     :return: 返回的是格式化好的时间，如果不传时间戳，那么返回当前的时间
+#     '''
+#     if timestame:
+#         time_tuple = time.localtime(timestame)
+#         return time.strftime(format,time_tuple)
+#     return time.strftime(format)
 
 
 

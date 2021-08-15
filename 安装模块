@@ -1,0 +1,2 @@
+pip install rediscluster
+pip install redis-py-cluster

@@ -1,0 +1,19 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="common.utils" />
+          <option value="common.log" />
+          <option value="day11.rainbow.common.send_message.conf" />
+          <option value="conf.config.dingding" />
+          <option value="conf.config.log_path" />
+          <option value="conf.config.log_level" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

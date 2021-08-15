@@ -1,5 +1,5 @@
 from urllib.request import urlopen
-from urllib.parse import  urlencode,urljoin,quote,quote_plus,unquote,unquote_plus
+from urllib.parse import urlencode,urljoin,quote,quote_plus,unquote,unquote_plus
 
 url ="http://api.nnzhp.cn/api/user/stu_info"
 data ={"stu_name":"xiaohei","age":18}

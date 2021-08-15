@@ -8,3 +8,11 @@ path里面配置：python（安装目录E:\python） +E:\python\Scripts
   然后安装：汉子转拼音模块 pip install xpinyin·】·······················1】
   pip install faker 模块
   pip install pymysql
+
+  pip install pytest
+  pip install parse
+  pip install os
+
+  pip install flask  开发接口
+
+  pip install yaml -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com

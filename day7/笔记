@@ -1,0 +1,68 @@
+
+上周回顾：
+    1、操作数据库
+        connect = pymysql.connect(host,user,password,port,db,autocommit=True,charset="utf8")
+        cur = connect.coursr()
+          cur.execute(sql)
+        cur.fetchone()
+        cur.fetchall()
+        cur.close()
+        cur.close()
+    2、写excel
+        xlwt
+        book = xlwt.WorkBook()
+        sheet = book.add_sheet("sheet")
+        sheet.write(0,0,"id")
+        sheet.write(0,0,"id")
+        sheet.write(0,0,"id")
+        book.save("a.xls")
+    3、faker
+    4、md5加密的
+     import hashlib
+     m = hashlib.md5("xxxx".encode())
+     return m.hexdigest()
+    5、复制文件、删除非空文件夹的
+        shuitl
+    6、
+本周内容：
+    1、讲作业
+    2、redis操作
+         118.24.3.40   3306 HK139bc&*
+
+        redis是一个数据库，它是非关系型数据库，nosql类型
+        key-value
+        redis数据全部放在内存里面，每秒钟最大能支持10w的读写
+        redis查出来都是bytes类型的
+        redis-cli -a password -p 6379 -h ip
+
+        select 5
+
+        keys *
+        type key
+
+    3、excel讲完
+        xlrd只能读
+        xlwt只能写
+        xlutils只能修改
+        写的时候不能超过65536行
+        xls、xlsx
+
+        openpyxl
+        必须得是xlsx这种的excel
+
+    4、网络请求 --完成
+
+    5、处理异常
+    6、写日志
+    7、发邮件
+    8、发钉钉
+
+    作业：
+        1、传入一个群号，把群里面所有人的头像下载到本地，放到群号的文件夹，头像的名称是群昵称/qq昵称
+
+        https://q4.qlogo.cn/g?b=qq&nk=511402865&s=140
+
+
+
+            # username: kunkun
+    # password: 12345 @ kk

@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day12" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/.pytest_cache" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/biz" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/cases" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/conf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/data" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/logs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/report" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day7/data1" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="form1">
+    <input type="text" id="token">
+    <button onclick="login();return false">登录</button>
+</form>
+
+</body>
+<script crossorigin="anonymous"
+            integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+            src="https://lib.baomitu.com/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+
+    function login() {
+
+        $.cookie("token",$("#token").val(),7) //新增cookie
+        $.cookie("token") //获取cookie
+        $.cookie("token",null) //删除
+
+      // localStorage.setItem("token","12235235")
+      // localStorage.getItem("token")
+      //   localStorage.removeItem("token")
+
+         // sessionStorage.setItem("token","12235235")
+      // sessionStorage.getItem("token")
+      //   sessionStorage.removeItem("token")
+    }
+
+</script>
+</html>

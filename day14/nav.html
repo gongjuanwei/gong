@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav {
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #e8e8e8;
+            line-height: 40px;
+        }
+
+        .item {
+            display: inline-block;
+            margin-left: 10px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="item "><a href="#">百度</a></div>
+    <div class="item active"><a href="#">新浪</a></div>
+    <div class="item"><a href="#">腾讯</a></div>
+    <div class="item" style="float: right;margin-right: 100px;">
+        <img src="default.jpg" style="height: 25px;width: 25px;border-radius: 50%;border: 1px solid #e8e8e8;">
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        src="https://lib.baomitu.com/jquery/3.6.0/jquery.js"></script>
+</body>
+<script>
+    $(".item").on('click', function (){
+        var tag = $(".item") //4
+        for (let i = 0; i < tag.length; i++) {
+            var node = $(tag[i])
+            if (node.hasClass("active")) {
+                node.removeClass("active")
+            }
+        }
+        $(this).addClass("active")
+
+
+    })
+
+</script>
+
+</html>

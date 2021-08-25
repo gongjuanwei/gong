@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    vue生命周期钩子
+
+    <br>
+    <zizhujian v-if="tag" :msg="msg"></zizhujian>
+    <br>
+
+    <button @click='change_tag'>点我展示子组件</button>
+    <br>
+    <button @click='send_msg'>点我向子组件发送数据</button>
+
+
+</div>
+</body>
+
+<script>
+    Vue.component("zizhujian", {
+        template: "<div><h1 id='zzj' >我是子组件--{{msg}}</h1></div>",
+        props: ["msg"],
+        beforeUpdate: function () {
+            console.log("beforeUpdate")
+            //组件发生变化之前执行
+        },
+        updated: function () {
+            console.log("updated")
+            //组件发生变化之后执行
+        },
+        beforeDestroy: function () {
+            //组件销毁之前执行
+            console.log("beforeDestroy")
+        },
+        destroyed: function () {
+            //组件销毁之后执行
+            console.log("destroyed")
+        },
+    })
+
+    var vm = new Vue(
+        {
+            el: "#app",
+            data: {
+                username: "abc",
+                type: "password",
+                tag: true,
+                msg: "父组件发送的数据",
+                count: 0
+            },
+            beforeCreate: function () {
+                //vue组件创建之前，这时候data里面还没有数据
+                console.log("beforeCreate...", this.username) //这时候没有
+                console.log("beforeCreate")
+            },
+            created: function () {
+                //组件创建之后，这时候methods和data就有了，调用接口可以在这里
+                console.log("created...", this.username)
+                console.log("created")
+
+            },
+            beforeMount: function () {
+                //页面挂载之前，这时候还没有生成dom结构
+                console.log("beforeMount", document.getElementById("zzj"))
+                console.log("beforeMount")
+            },
+            mounted: function () {
+                //生成了dom结构
+                console.log("mounted", document.getElementById("zzj"))
+                console.log("mounted")
+            },
+            methods: {
+                change_tag() {
+                    this.tag = !this.tag
+                },
+                send_msg() {
+                    this.msg = "send_msg" + this.count
+                    this.count++
+                }
+            }
+        }
+    )
+</script>
+</html>

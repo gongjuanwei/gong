@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            width: 500px;
+            height: 500px;
+            border: solid 1px;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="" alt="" id="img1">
+</div>
+</body>
+<script crossorigin="anonymous"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        src="https://lib.baomitu.com/jquery/3.6.0/jquery.js"></script>
+<script>
+    function hdp() {
+        var img_list = ["imgs/1.jpg", "imgs/2.jpg", "imgs/3.jpg"]
+        var index = 0
+        setInterval(() => {
+            if (index==3){
+                index = 0
+            }
+            var img = img_list[index]
+            $("#img1").attr("src", img)
+            index++
+
+        }, 1000)
+    }
+    hdp()
+</script>
+</html>

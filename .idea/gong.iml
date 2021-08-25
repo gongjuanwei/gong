@@ -20,8 +20,9 @@
       <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/logs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day11/rainbow/report" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day7/data1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day15/VUE" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.7.0 (E:\python\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

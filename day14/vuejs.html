@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <style>
+        input, button {
+            display: block;
+        }
+
+        .item {
+            font-size: 50px;
+        }
+
+        .item2 {
+            background-color: #66cc66;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="div1">
+    <el-button type="primary">主要按钮</el-button>
+
+    <button @click="show_meinv(1)">展示大美女if</button>
+    <button @click="show_meinv(2)">展示小美女show</button>
+
+
+    <h1 style="font-size: 50px" v-if="dmn">美女</h1>
+    <h1 style="font-size: 3px" v-show="xmn">美女</h1>
+
+
+    <input type="text" v-model="msg">
+
+    <input type="text" v-model="password">
+
+    password: <input v-bind:type="input_type" :class="my_class">
+
+    <h4 v-for="(name,index) in students">欢迎{{name}}</h4>
+
+    <h4 v-for="(value,key) in students2">{{key}}=>{{value}}</h4>
+
+
+    <button @click="change_password">修改密码</button>
+    <button @dbclick="change_msg">修改密码</button>
+    <button @click="show_password">展示密码</button>
+
+
+    {{msg}}
+    {{name}}
+    {{password}}
+</div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    app = new Vue(
+        {
+            el: "#div1",
+            data() {
+                return {
+                    "msg": "hello",
+                    "name": "xiaohei",
+                    password: "123456",
+                    input_type: "password",
+                    my_class: "item item2",
+                    students: ["吴康飞", "刘慧杰", "郑佩", "刘佩"],
+                    students2: {"name": "吴康飞", "age": 38},
+                    dmn: false,
+                    xmn: false
+                }
+            },
+            methods: {
+                change_password: function () {
+                    this.password = "wukangfei"
+                },
+                change_msg() {
+                    this.msg = "今天早点下课！"
+                },
+                show_password() {
+                    if (this.input_type == "password") {
+                        this.input_type = "text"
+                    } else {
+                        this.input_type = "password"
+                    }
+
+                },
+                show_meinv(type) {
+                    if (type == 1) {
+                        this.dmn = !this.dmn
+                    } else {
+                        this.xmn = !this.xmn
+                    }
+                }
+
+            }
+        }
+    )
+
+</script>
+
+</html>

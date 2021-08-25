@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button, input {
+            display: block;
+        }
+
+        .hhh {
+            background-color: #66cc66;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1" class="page">
+    username: <input type="text">
+    password: <input type="password" name="password">
+    <button onclick="del_node(this)">删除节点</button>
+    <button onclick="change_css()">修改样式</button>
+    <button onclick="show_password()">显示密码</button>
+    <button onclick="refresh()">刷新</button>
+    <button onclick="op_system(1)">开机</button>
+    <button onclick="op_system(2)">关机</button>
+    <button onclick="dingshi()">执行定时</button>
+    <button onclick="close_dingshi()">结束定时</button>
+
+</div>
+<div class="page" onclick="xiaren()">div222</div>
+
+<button onclick="add_node()">点我给div1加内容</button>
+
+<!--<button onclick="xiaren()">点我</button>-->
+<!--<button ondblclick="xiaren()">双击我</button>-->
+<!--username:<input type="text" onblur="test_blur()">-->
+<!--&lt;!&ndash;onblur光标离开之后触发的&ndash;&gt;-->
+<!--password:<input type="text" onchange="test_change()">-->
+<!--&lt;!&ndash;onblur数据改变了触发&ndash;&gt;-->
+
+<!--password2:<input type="text" oninput="test_input()">-->
+<!--输入的时候触发的-->
+</body>
+
+<script>
+    login_button = "<button >登录</button>"
+    var div1 = document.getElementById("div1")
+
+    function refresh() {
+        // document.location.reload()
+        // document.location.href = "http://www.baidu.com"
+        window.open("http://www.baidu.com")
+    }
+
+    function op_system(type) {
+
+        if (type == 1) {
+            var audio = new Audio("开机.mp3")
+            audio.play()
+        } else {
+            var ret = confirm("确认关机吗")
+            if (ret) {
+                setTimeout(function () {
+                    var audio = new Audio("关机.mp3")
+                    audio.play()
+                }, 3000)
+
+            }
+        }
+    }
+    function dingshi() {
+        interval_id = setInterval(function () {
+            // window.location.reload()
+            console.log("setInterval")
+        },1000)
+
+    }
+    function close_dingshi(){
+        clearInterval(interval_id)
+    }
+
+    function show_password() {
+        var tag = div1.children[1]
+        console.log(tag.getAttributeNames())
+
+        if (tag.getAttribute("type") == "text") {
+            tag.setAttribute("type", "password")
+
+        } else {
+            tag.setAttribute("type", "text")
+
+        }
+    }
+
+    function del_node(tag) {
+        div1.removeChild(tag)
+
+    }
+
+    function change_css() {
+        // div1.setAttribute("class","hhh")
+        // div1.style.fontSize = "50px"
+        div1.style.backgroundColor = "red";
+
+    }
+
+    function get_attr() {
+
+    }
+
+    function add_node() {
+        var input = document.createElement('button')
+        input.innerText = "我是添加的"
+        input.setAttribute("onclick", "hanshuming")
+        div1.appendChild(input) //增加节点,需要传入一个element，不能直接传字符串
+    }
+
+    function add_div1() {
+
+        var div1 = document.getElementById("div1")
+        // div1.innerHTML = "<a href='笔记.txt'>哈哈哈哈</a>"
+        // div1.insertAdjacentHTML("beforeEnd",login_button)
+        //beforeEnd，在这个节点内的最后面添加
+        // div1.insertAdjacentHTML("beforeBegin",login_button)
+        //这个节点的前面
+        // div1.insertAdjacentHTML("afterBegin",login_button)
+        //在这个节点内的最前面添加
+        // div1.insertAdjacentHTML("afterEnd",login_button)
+        //节点下面
+        // console.log(div1.innerHTML)  //这个元素里面的html
+        // console.log(div1.innerText)  //这个元素里面的文字
+    }
+
+    function xiaren() {
+        alert("我是👻！！！")
+    }
+
+    function test_blur() {
+        alert("光标离开了。。")
+    }
+
+    function test_change() {
+        alert("数据改变了。。")
+    }
+
+    function test_input() {
+        alert("test_input。。")
+    }
+
+
+    var div1 = document.getElementById("div1")
+    var page = document.getElementsByClassName("page")
+    var div2 = document.getElementsByTagName("div")
+    console.log(div1)
+    console.log(page)
+    console.log(div2)
+
+
+
+</script>
+
+
+</html>

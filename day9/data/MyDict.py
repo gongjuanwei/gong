@@ -1,4 +1,5 @@
 class MyDict(dict):
+    # 对象在没有某个属性的话，会调用它
     def __getattr__(self, item):
         value = self.get(item)
         if type(value) == dict:
@@ -11,6 +12,7 @@ class MyDict(dict):
         return value
         #是这个对象在没有某个属性的话，会调用它
 
+
 if __name__ == '__main__':
 
         #魔法方法
@@ -20,8 +22,11 @@ if __name__ == '__main__':
 
     d = MyDict(d1)
     print(d.name)
+    print("addr..",d.addr)
+    print(d)
+
+
 
 # print(d.info.city)
 # print(d.info.cars.name)
 # print(d.addr)
-# print(d.addr1)

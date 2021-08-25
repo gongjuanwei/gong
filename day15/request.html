@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+          guanggao
+    </style>
+</head>
+<body>
+
+<div id="app" style="width: 500px">
+
+    <el-form ref="form" :model="form" label-width="80px">
+        <el-form-item label="用户名">
+            <el-input v-model="form.username"></el-input>
+        </el-form-item>
+
+        <el-form-item label="密码">
+            <el-input v-model="form.password" type="password"></el-input>
+        </el-form-item>
+
+        <el-form-item label="头像">
+            <el-input v-model="form.img" type="file"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="login">登录</el-button>
+        </el-form-item>
+    </el-form>
+
+    <p>{{text}}</p>
+
+
+</div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                form: {
+                    username: "admin",
+                    password: "123456"
+                },
+                get_url: "http://sky.nnzhp.cn/api/user/user_list",
+                text: ""
+            }
+        },
+        methods: {
+            login() {
+                console.log(this.form)
+                var form_data = new FormData();
+                for (const key in this.form) {
+                    form_data.append(key,this.form[key])
+                }
+                // form_data.append("username",this.form.username)
+                // form_data.append("password",this.form.password)
+                // form_data.append("img",this.form.img)
+
+                // axios.get(this.get_url,data).then(response=>{
+                //     this.text = response.data
+                // }).catch(function (error){
+                //     console.log("error",error)
+                // })
+
+                // axios.post(this.get_url,this.form).then(res=>{
+                //     this.text = res.data
+                // })
+
+                // axios.request(
+                //         {url:this.post_url,method:"post",data:this.submit_data}
+                //     ).then(response=>{
+                //         const data = response.data
+                //         this.response = data
+                //     })
+
+                axios.post(this.get_url, form_data).then(res => {
+                    this.text = res.data
+                })
+
+            }
+        }
+    })
+
+</script>
+</html>

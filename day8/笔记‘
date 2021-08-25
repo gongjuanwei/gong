@@ -1,0 +1,66 @@
+作业：
+    1、qq下载头像
+    2、发新闻
+    3、监控错误次数大于5次
+        user_nhy
+            error_count 10
+        #1、全量   10个  -》  select * from user_nhy where error_count > 5
+        #10
+
+        black_user_nhy : 1,2,3,4,5,10
+
+        #2、增量    5个  select * from user_nhy where error_count > 5
+    4、迁移表
+        水平拆分
+        一张表
+
+        8张
+
+    5、验证迁移数据
+
+
+本周内容：
+    1、单机redis   集群 redis1 redis2 redis3
+    pip install redis-py-cluster
+    2、面向对象 class
+        面向过程
+            获取所有qq号=》下载头像=》保存文件
+        面向对象
+        类
+            一个模板、一个模型
+        对象、实例
+            通过模型制作出来的东西
+        实例化
+            制作实例的过程
+        继承
+
+        self
+            本类对象
+        私有：
+            私有方法
+            私有变量
+            出了类之后就不能调用了
+
+
+
+     买车
+        4s
+            交钱买车
+        保险公司
+            交钱买保险
+        税务局
+            车船税
+        车管所
+            验车
+            上牌
+    3、多线程、多进程
+
+    作业：
+        封装MyRequest的类,要好用，每次请求的时候要记录请求参数和返回结果到日志
+        class MyRequest:
+            def get(self):
+                log.info("url,data,get")
+
+    r = MyRequest(url,data,header,json,files)
+    result = r.post()  # {}
+    result = r.get()  # {}
